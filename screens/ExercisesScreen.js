@@ -35,7 +35,9 @@ function SessionsScreen({ navigation, route }) {
 
   const renderFunction = (item) => (
     <TouchableOpacity onPress={() => {
-      Linking.openURL( 'https://www.youtube.com/watch?v=' + item.video.video_link );
+      // Linking.openURL( 'https://www.youtube.com/watch?v=' + item.video.video_link );
+      navigation.push('VideoPlayer', {url: item.video.video_link })
+      
     }}>
       <ListItem key={item.video.id} bottomDivider>
           <Avatar

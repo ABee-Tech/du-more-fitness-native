@@ -7,6 +7,7 @@ import HomeScreen from './screens/HomeScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import SessionsScreen from './screens/SessionsScreen';
 import ExercisesScreen from './screens/ExercisesScreen';
+import VideoPlayerScreen from './screens/VideoPlayerScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import axios from 'axios';
 
@@ -36,6 +37,11 @@ const HomeScreenScreen = () => (
     <HomeScreenStack.Screen name="Exercises" component={ExercisesScreen} options={({route})=>(
       {
         title: route.params.name + " | Exercises"
+      }
+    )}/>
+    <HomeScreenStack.Screen name="VideoPlayer" component={VideoPlayerScreen} options={({route})=>(
+      {
+        title: "Video Player"
       }
     )}/>
   </HomeScreenStack.Navigator>
